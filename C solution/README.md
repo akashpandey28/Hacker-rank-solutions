@@ -1,0 +1,2 @@
+# Hacker-rank-Solution
+All hacker rank answers will be solved in this particular repo..
