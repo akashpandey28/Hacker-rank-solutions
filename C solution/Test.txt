@@ -1,1 +1,2 @@
-workin on problem.
+C Programming Test
+C Programming Test paper includes tests on fundamentals, control statements, functions, arrays, pointers, strings,
