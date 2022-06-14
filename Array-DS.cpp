@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -5,7 +6,7 @@
 
 int main() {
 
-   int n, new_number;
+   int n, new_number;  //initializin a number
     scanf("%d", &n);
     
     int *p_numbers = (int*)malloc(n * sizeof(int));
