@@ -1,0 +1,17 @@
+bool has_cycle(SinglyLinkedListNode* head) {
+
+    SinglyLinkedListNode * nodePtr = head;
+    int i;
+    
+    for ( i=0; i < 1000; i++ )
+    {
+        if ( !nodePtr )
+            break;
+        nodePtr = nodePtr->next;
+    }
+    
+    if ( i >= 1000 )
+        return true;
+    else
+        return false;
+}
