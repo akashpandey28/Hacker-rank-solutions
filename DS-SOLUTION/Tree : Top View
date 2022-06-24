@@ -1,0 +1,27 @@
+typedef struct node node;
+
+void traverse(int *topL, int *topR, int lpos, int rpos, node *n){
+  if(!n) return;
+  if(lpos >= 0 && topL[lpos] == 0) topL[lpos] = n->data;
+  traverse(topL, topR, lpos + 1, rpos - 1, n->left);
+  traverse(topL, topR, lpos - 1, rpos + 1, n->right);
+  if (rpos >= 0) topR[rpos] = n->data;
+}
+
+void topView(struct node *root) {
+  //set up answer arrays
+  if(!root) return;
+  int left[501];
+  int right[501];
+  memset(left, 0, sizeof(int) * 501);
+  memset(right, 0, sizeof(int) * 501);
+
+  //traverse the tree
+  traverse(left, right, -1, 0, root);
+
+  //print the answer
+  int i = 0;
+  while(left[i] > 0) i++;
+  for(i--; i >= 0; i--) printf("%d ", left[i]);
+  for(i = 0; right[i] > 0; i++) printf("%d ", right[i]);
+}
